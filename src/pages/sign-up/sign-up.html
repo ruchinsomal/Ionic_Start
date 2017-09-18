@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Sign Up
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+
+    <ion-item>
+      <ion-label stacked>Name</ion-label>
+    <ion-input type="text" name="name" [(ngModel)]="lblName" id="lblName"    class="form-field" placeholder="Enter Name"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Email</ion-label>
+    <ion-input type="text" name="email" [(ngModel)]="lblEmail" id="lblEmail"    class="form-field" placeholder="Enter Email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Password</ion-label>
+      <ion-input  type="password" name="Password" [(ngModel)]="lblPassword" id="lblPassword"    class="form-field" placeholder="Enter Password"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Confirm Password</ion-label>
+      <ion-input  type="password" name="Confirm Password" [(ngModel)]="lblCPassword" id="lblCPassword"    class="form-field" placeholder="Confirm Password"></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+  <div padding>
+    <button ion-button (click)='btnRegister()' color="primary" block>Register</button>
+  </div>
+
+</ion-content>

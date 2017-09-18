@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, Events, ViewController } from 'ionic-angular';
 
 @Component({
   selector: 'page-home',
@@ -7,11 +7,15 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public viewCtrl: ViewController, public event: Events) {
+  
   }
 
   ionViewDidLoad() {
-  	console.log("name is"+this.navParams.get('name'))
+  	console.log("name is "+this.navParams.get('name'))
+  	let data = {name:'my nottification',
+        myClass:'home page'};
+        this.event.publish('addme',data);
   }
 
 }

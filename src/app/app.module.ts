@@ -7,12 +7,29 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
+import { SignUpPage } from '../pages/sign-up/sign-up';
+import { SideBarPage } from '../pages/side-bar/side-bar';
+import { MyListPage } from '../pages/my-list/my-list';
+import { TabsPage } from '../pages/tabs/tabs';
+import { Tab1Page } from '../pages/tab1/tab1';
+import { Tab2Page } from '../pages/tab2/tab2';
+import { SpecialPage } from '../pages/special/special';
+import { MyCustomListPage } from '../pages/my-custom-list/my-custom-list';
+import { UserProvider } from '../providers/user/user';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    LoginPage
+    LoginPage,
+    SignUpPage,
+    SideBarPage,
+    MyListPage,
+    MyCustomListPage,
+    SpecialPage,
+    TabsPage,
+    Tab1Page,
+    Tab2Page
   ],
   imports: [
     BrowserModule,
@@ -22,12 +39,21 @@ import { LoginPage } from '../pages/login/login';
   entryComponents: [
     MyApp,
     HomePage,
-    LoginPage
+    LoginPage,
+    SignUpPage,
+    SideBarPage,
+    MyListPage,
+    MyCustomListPage,
+    SpecialPage,
+    TabsPage,
+    Tab1Page,
+    Tab2Page
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    UserProvider
   ]
 })
 export class AppModule {}
