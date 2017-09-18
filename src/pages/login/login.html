@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Login
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+
+    <ion-item>
+      <ion-label stacked>Username</ion-label>
+    <ion-input type="text" name="Username" [(ngModel)]="lblUsername" id="lblUsername"    class="form-field" placeholder="Enter Username"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Password</ion-label>
+      <ion-input  type="password" name="Password" [(ngModel)]="lblPassword" id="lblPassword"    class="form-field" placeholder="Enter Password"></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+  <div padding>
+    <button ion-button (click)='btnSignIn()' color="primary" block>Sign In</button>
+  </div>
+
+</ion-content>
