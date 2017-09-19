@@ -48,6 +48,7 @@ pages: PageInterface[] = [
  
     // The active child nav is our Tabs Navigation
     if (this.nav.getActiveChildNav() && page.index != undefined) {
+      console.log('getActiveChildNav '+page.index);
       this.nav.getActiveChildNav().select(page.index);
     } else {
       // Tabs are not active, so reset the root page 
@@ -61,7 +62,7 @@ pages: PageInterface[] = [
           this.nav.setRoot(CafePage);
         break;
         default:
-          this.nav.setRoot(SpecialPage);
+          this.nav.setRoot(TabsPage);
         break;
       }
     }
