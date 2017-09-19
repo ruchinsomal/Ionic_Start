@@ -29,7 +29,7 @@ export class LoginPage {
         // });
         // modal.present();
         // this.navCtrl.push(HomePage,data);
-        this.navCtrl.setRoot(TabsPage);
+        this.navCtrl.setRoot(SideBarPage);
     }
     btnSignUp() {
         this.navCtrl.push(SignUpPage);

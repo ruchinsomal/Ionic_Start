@@ -11,6 +11,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { Tab1Page } from '../pages/tab1/tab1';
 import { Tab2Page } from '../pages/tab2/tab2';
 import { SpecialPage } from '../pages/special/special';
+import { CafePage } from '../pages/cafe/cafe';
 import { MyCustomListPage } from '../pages/my-custom-list/my-custom-list';
 @Component({
   templateUrl: 'app.html'

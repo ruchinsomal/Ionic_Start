@@ -14,6 +14,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { Tab1Page } from '../pages/tab1/tab1';
 import { Tab2Page } from '../pages/tab2/tab2';
 import { SpecialPage } from '../pages/special/special';
+import { CafePage } from '../pages/cafe/cafe';
 import { MyCustomListPage } from '../pages/my-custom-list/my-custom-list';
 import { UserProvider } from '../providers/user/user';
 
@@ -29,7 +30,8 @@ import { UserProvider } from '../providers/user/user';
     SpecialPage,
     TabsPage,
     Tab1Page,
-    Tab2Page
+    Tab2Page,
+    CafePage
   ],
   imports: [
     BrowserModule,
@@ -47,7 +49,8 @@ import { UserProvider } from '../providers/user/user';
     SpecialPage,
     TabsPage,
     Tab1Page,
-    Tab2Page
+    Tab2Page,
+    CafePage
   ],
   providers: [
     StatusBar,

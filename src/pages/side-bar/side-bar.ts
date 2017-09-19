@@ -5,12 +5,14 @@ import { TabsPage } from '../tabs/tabs';
 import { Tab1Page } from '../tab1/tab1';
 import { Tab2Page } from '../tab2/tab2';
 import { SpecialPage } from '../special/special';
+import { CafePage } from '../cafe/cafe';
 
 export interface PageInterface {
   title: string;
   pageName: string;
   tabComponent?: any;
   index?: number;
+  sIndex?: number;
   icon: string;
 }
 
@@ -19,17 +21,17 @@ export interface PageInterface {
   templateUrl: 'side-bar.html',
 })
 export class SideBarPage {
-	rootPage = 'TabsPage'; 
+	rootPage = TabsPage; 
 	@ViewChild(Nav) nav:Nav;
 
 pages: PageInterface[] = [
     { title: 'Tab 1', pageName: 'TabsPage', tabComponent: 'Tab1Page', index: 0, icon: 'home' },
     { title: 'Tab 2', pageName: 'TabsPage', tabComponent: 'Tab2Page', index: 1, icon: 'contacts' },
-    { title: 'Special', pageName: 'SpecialPage', icon: 'shuffle' },
+    { title: 'Special', pageName: 'SpecialPage', icon: 'shuffle', sIndex: 2 },
+    { title: 'Cafe', pageName: 'CafePage', icon: 'cafe', sIndex: 3 }
   ];
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    console.log('constructor SideBarPage');
   }
 
   ionViewDidLoad() {
@@ -50,7 +52,18 @@ pages: PageInterface[] = [
     } else {
       // Tabs are not active, so reset the root page 
       // In this case: moving to or from SpecialPage
-      this.nav.setRoot(page.pageName, params);
+    console.log('selected index: '+page.index);
+      switch (page.sIndex) {
+        case 2:
+          this.nav.setRoot(SpecialPage);
+        break;
+        case 3:
+          this.nav.setRoot(CafePage);
+        break;
+        default:
+          this.nav.setRoot(SpecialPage);
+        break;
+      }
     }
   }
  

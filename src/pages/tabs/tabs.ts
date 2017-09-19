@@ -15,11 +15,10 @@ import { Tab2Page } from '../tab2/tab2';
   templateUrl: 'tabs.html',
 })
 export class TabsPage {
-  tab1Root: any = 'Tab1Page';
-  tab2Root: any = 'Tab2Page';
+  tab1Root: any = Tab1Page;
+  tab2Root: any = Tab2Page;
   myIndex: number;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    console.log('ionViewDidLoad TabsPage');
   	this.myIndex = navParams.data.tabIndex || 0;
   }
 
